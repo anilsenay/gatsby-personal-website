@@ -1,21 +1,29 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+
+import styles from "./index.module.scss"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className={styles.container}>
+      <h1>Anıl Şenay</h1>
+      <h2>Personal Website</h2>
+      <p className={styles.whoami}>
+        Hi, I am Anıl. I am studying Computer Engineering at Marmara University.
+        I've been interested in computers and programming since my childhood.{" "}
+        <span className={styles.underline}>Coding</span> and{" "}
+        <span className={styles.underline} style={{ borderColor: "#EA4C89" }}>
+          design
+        </span>
+        , which I started with a curiosity and passion, is now a big part of my
+        life. I am interested in Front-end mostly.
+      </p>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
 
