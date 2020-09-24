@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/Layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Articles from "../components/Articles"
 
 import styles from "./index.module.scss"
 
@@ -23,6 +23,8 @@ const IndexPage = () => (
         , which I started with a curiosity and passion, is now a big part of my
         life. I am interested in Front-end mostly.
       </p>
+
+      <Articles />
     </div>
   </Layout>
 )

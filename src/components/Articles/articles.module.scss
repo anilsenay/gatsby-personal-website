@@ -1,0 +1,25 @@
+@import "../../colors.scss";
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .headerTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: $title-text;
+  }
+
+  .allLink {
+    margin-left: auto;
+    font-size: 16px;
+    color: $title-text;
+  }
+}
+
+.articles {
+  border: 2px solid rgb(28, 44, 53);
+  border-radius: 6px;
+  margin-top: 16px;
+}
