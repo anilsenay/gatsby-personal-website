@@ -1,10 +1,3 @@
-@import "../../colors.scss";
-
-a {
-  color: $green-text;
-  text-decoration: none;
-}
-
 .container {
   display: flex;
   border-radius: 8px;
@@ -30,8 +23,21 @@ a {
       margin-bottom: 14px;
     }
     .info {
-      font-size: 16px;
+      font-size: 14px;
       margin-bottom: auto;
     }
+  }
+
+  &:nth-child(3n) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  &:nth-child(3n + 1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  &:nth-child(3n + 2) {
+    grid-column-start: 1;
+    grid-column-end: 2;
   }
 }

@@ -1,0 +1,13 @@
+@import "../colors";
+
+.container {
+  margin-top: 70px;
+
+  .projects {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 12px;
+  }
+}
