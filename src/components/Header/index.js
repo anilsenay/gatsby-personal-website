@@ -13,14 +13,14 @@ const Header = () => (
       <Link to="/projects" className={styles.links}>
         Projects
       </Link>
-      <Link to="/" className={styles.links}>
+      <Link to="/blog" className={styles.links}>
         Blog
       </Link>
       <div className={styles.rightLinks}>
-        <Link to="/" className={styles.links_small}>
+        <Link to="/about" className={styles.links_small}>
           About
         </Link>
-        <Link to="/" className={styles.links_small}>
+        <Link to="/contact" className={styles.links_small}>
           Contact
         </Link>
       </div>
