@@ -1,9 +1,8 @@
 ---
-slug: "/posts/deneme_create_react_app/"
-date: "2020-07-15"
-title: "Example: Create-react-app readme from github 5"
+slug: "/blog/deneme2/"
+date: "2020-07-12"
+title: "Example: Create-react-app readme from github 2"
 keywords: "react, create-react-app, blog, test, markdown"
-icon: "https://www.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
 ---
 
 ### I took this markdown file from github.com/facebook/create-react-app as example

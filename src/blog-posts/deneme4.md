@@ -1,5 +1,5 @@
 ---
-slug: "/posts/deneme_create_react_app/"
+slug: "/blog/deneme4/"
 date: "2020-07-14"
 title: "Example: Create-react-app readme from github 4"
 keywords: "react, create-react-app, blog, test, markdown"
