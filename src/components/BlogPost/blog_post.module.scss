@@ -1,0 +1,66 @@
+@import "../../colors.scss";
+
+.container {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #20383d;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
+
+  .articleInfo {
+    .title {
+      color: $title-text;
+      font-size: 36px;
+      line-height: 36px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .info {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin-bottom: 30px;
+
+      .dateText {
+        margin-left: 8px;
+      }
+      .dot {
+        margin-left: 8px;
+        margin-right: 8px;
+        font-size: 16px;
+      }
+    }
+
+    .shortText {
+      color: $main-text;
+    }
+
+    .tags {
+      display: flex;
+      align-items: center;
+
+      .tagText {
+        margin-left: 10px;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .iconContainer {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  &:hover {
+    border-left: 4px solid #81f59b;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: #81f59b11;
+    cursor: pointer;
+  }
+}
