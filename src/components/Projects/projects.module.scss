@@ -4,6 +4,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  margin-top: 100px;
 
   .headerTitle {
     font-size: 24px;
@@ -18,8 +19,9 @@
   }
 }
 
-.articles {
-  border: 2px solid rgb(28, 44, 53);
-  border-radius: 6px;
+.projects {
   margin-top: 36px;
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 12px;
 }

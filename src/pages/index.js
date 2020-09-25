@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Articles from "../components/Articles"
 
 import styles from "./index.module.scss"
+import Projects from "../components/Projects"
 
 const IndexPage = () => (
   <Layout>
@@ -25,6 +26,7 @@ const IndexPage = () => (
       </p>
 
       <Articles />
+      <Projects />
     </div>
   </Layout>
 )
