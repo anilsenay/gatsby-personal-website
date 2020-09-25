@@ -11,10 +11,11 @@ a {
   background-color: #1c2c35;
   margin-bottom: 10px;
   overflow: hidden;
-  height: 260px;
+  min-height: 260px;
 
   .leftBorder {
     width: 6px;
+    min-width: 6px;
     background-color: #81f59b;
     align-self: normal;
   }

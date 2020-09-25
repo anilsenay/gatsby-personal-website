@@ -1,20 +1,23 @@
 import React from "react"
 
 import styles from "./project.module.scss"
+import githubColors from "../../../static/github-colors.json"
 
-export default function Project() {
+export default function Project({ name, description, url, language }) {
   return (
     <div className={styles.container}>
-      <div className={styles.leftBorder} />
+      <div
+        className={styles.leftBorder}
+        style={{
+          backgroundColor: language ? githubColors[language].color : "",
+        }}
+      />
 
       <div className={styles.projectInfo}>
-        <div className={styles.title}>Change-My-Mind</div>
-        <div className={styles.info}>
-          A debate app built with React Native / Expo. Using Firebase as
-          backend.
-        </div>
+        <div className={styles.title}>{name}</div>
+        <div className={styles.info}>{description}</div>
         <div className={styles.linkText}>
-          Github: <a href="#">https://github.com/anilsenay/Change-My-Mind</a>
+          Github: <a href={url}>{url}</a>
         </div>
       </div>
     </div>
