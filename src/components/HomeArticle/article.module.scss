@@ -18,6 +18,10 @@
 
   .iconContainer {
     width: 80px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 
   &:hover {

@@ -8,7 +8,7 @@ import Articles from "../components/Articles"
 import styles from "./index.module.scss"
 import Projects from "../components/Projects"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <div className={styles.container}>
@@ -25,10 +25,32 @@ const IndexPage = () => (
         life. I am interested in Front-end mostly.
       </p>
 
-      <Articles />
+      <Articles lastestArticles={data.allMarkdownRemark.nodes} />
       <Projects />
     </div>
   </Layout>
 )
+
+export const pageQuery = graphql`
+  {
+    allMarkdownRemark(
+      limit: 5
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      nodes {
+        frontmatter {
+          date
+          slug
+          title
+          keywords
+          icon
+        }
+        wordCount {
+          words
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

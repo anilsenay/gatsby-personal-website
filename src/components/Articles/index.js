@@ -3,7 +3,8 @@ import React from "react"
 import styles from "./articles.module.scss"
 import Article from "../HomeArticle"
 
-export default function Articles() {
+export default function Articles({ lastestArticles }) {
+  console.log(lastestArticles)
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -11,10 +12,9 @@ export default function Articles() {
         <span className={styles.allLink}>All articles »</span>
       </div>
       <div className={styles.articles}>
-        <Article />
-        <Article />
-        <Article />
-        <Article />
+        {lastestArticles.map((item, index) => {
+          return <Article key={index} data={item} />
+        })}
       </div>
     </div>
   )
