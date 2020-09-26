@@ -10,7 +10,6 @@ export default function Project({ name, description, url, language }) {
   const langs = useGetLanguages(
     `https://api.github.com/repos/anilsenay/${name}/languages`
   )
-  console.log(langs)
   return (
     <a className={styles.container} href={url}>
       <div
@@ -27,11 +26,11 @@ export default function Project({ name, description, url, language }) {
         <div className={styles.info}>{description}</div>
         <div className={styles.githubUrl}>
           <span>Github: </span>
-          <a href={url}>{url}</a>
+          <span className={styles.urlText}>{url}</span>
         </div>
         <div className={styles.languages}>
           {Object.keys(langs).map(language => {
-            return <Language language={language} />
+            return <Language key={language} language={language} />
           })}
         </div>
       </div>

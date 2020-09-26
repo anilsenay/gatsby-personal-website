@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
@@ -21,6 +21,7 @@ const ProjectsPage = () => {
           {repos.map(item => {
             return (
               <Project
+                key={item.name}
                 name={item.name}
                 description={item.description}
                 url={item.html_url}

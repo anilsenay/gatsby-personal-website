@@ -11,7 +11,7 @@ const useGetLanguages = url => {
     }
 
     fetchFromGithub()
-  }, [])
+  }, [url])
 
   return langs
 }

@@ -13,8 +13,8 @@ const BlogPage = ({ data }) => (
     <div className={styles.container}>
       <SearchBar />
       <div className={styles.articles}>
-        {data.allMarkdownRemark.nodes.map(post => {
-          return <BlogPost data={post} />
+        {data.allMarkdownRemark.nodes.map((post, index) => {
+          return <BlogPost key={index} data={post} />
         })}
       </div>
     </div>

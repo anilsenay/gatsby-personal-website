@@ -53,6 +53,10 @@
     }
     .githubUrl {
       margin-bottom: 12px;
+
+      .urlText {
+        color: $green-text;
+      }
     }
 
     .languages {

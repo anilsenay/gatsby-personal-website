@@ -8,7 +8,9 @@ export default function Article({ data }) {
     <Link to={data.frontmatter.slug}>
       <div className={styles.container}>
         <div className={styles.iconContainer}>
-          {data.frontmatter.icon && <img src={data.frontmatter.icon} />}
+          {data.frontmatter.icon && (
+            <img src={data.frontmatter.icon} alt={data.frontmatter.title} />
+          )}
         </div>
         <div className={styles.articleInfo}>
           <div className={styles.title}>{data.frontmatter.title}</div>

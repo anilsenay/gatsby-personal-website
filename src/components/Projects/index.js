@@ -17,6 +17,7 @@ export default function Projects({ lastestProjects }) {
         {lastestProjects.map(item => {
           return (
             <Project
+              key={item.name}
               name={item.name}
               description={item.description}
               url={item.html_url}

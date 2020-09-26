@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { projects } from "../../static/projects.json"
 
 const useGetRepos = url => {
@@ -14,11 +14,12 @@ const useGetRepos = url => {
     }
 
     fetchFromGithub()
-  }, [])
+  }, [url])
 
   return repos.length > 0
     ? repos.filter(item => {
         if (projects.some(e => e.name === item.name)) return item
+        else return false
       })
     : []
 }
