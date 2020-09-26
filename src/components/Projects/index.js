@@ -2,13 +2,16 @@ import React from "react"
 
 import styles from "./projects.module.scss"
 import Project from "../HomeProjectCard"
+import { Link } from "gatsby"
 
 export default function Projects({ lastestProjects }) {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <span className={styles.headerTitle}>Lastest Projects</span>
-        <span className={styles.allLink}>All projects »</span>
+        <span className={styles.allLink}>
+          <Link to="/projects">All projects »</Link>
+        </span>
       </div>
       <div className={styles.projects}>
         {lastestProjects.map(item => {
