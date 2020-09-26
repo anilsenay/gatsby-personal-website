@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import Articles from "../components/Articles"
 
 import styles from "./projects.module.scss"
 import SearchBar from "../components/SearchBar"

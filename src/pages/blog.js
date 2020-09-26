@@ -2,7 +2,6 @@ import React from "react"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import Articles from "../components/Articles"
 import SearchBar from "../components/SearchBar"
 
 import styles from "./blog.module.scss"
