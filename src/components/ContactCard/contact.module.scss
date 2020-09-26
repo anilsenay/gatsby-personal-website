@@ -1,0 +1,26 @@
+@import "../../colors.scss";
+
+.container {
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c2c35;
+  margin-bottom: 40px;
+
+  .title {
+    color: $green-text;
+    font-size: 48px;
+    font-weight: bold;
+    padding-bottom: 24px;
+    letter-spacing: 2px;
+  }
+
+  .textContainer {
+    width: 600px;
+    text-align: center;
+  }
+}
