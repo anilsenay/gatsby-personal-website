@@ -13,11 +13,17 @@ export default function Article({ data }) {
         <div className={styles.articleInfo}>
           <div className={styles.title}>{data.frontmatter.title}</div>
           <div className={styles.info}>
-            {new Date(data.frontmatter.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
+            <span className={styles.dateText}>
+              {new Date(data.frontmatter.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </span>
+            <span className={styles.dot}>·</span>
+            <span className={styles.readMinute}>
+              ~{parseInt(data.wordCount.words / 200) + 1} min read
+            </span>
           </div>
         </div>
       </div>

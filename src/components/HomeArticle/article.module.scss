@@ -1,9 +1,12 @@
+@import "../../colors.scss";
+
 .container {
   padding: 32px;
   padding-left: 0px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgb(28, 44, 53);
+  color: $main-text;
 
   .articleInfo {
     .title {
@@ -13,11 +16,21 @@
     }
     .info {
       font-size: 12px;
+      display: flex;
+      align-items: center;
+      color: $green-text;
+      font-weight: 500;
+
+      .dot {
+        margin-left: 8px;
+        margin-right: 8px;
+        font-size: 16px;
+      }
     }
   }
 
   .iconContainer {
-    width: 80px;
+    width: 50px;
     display: flex;
     align-items: center;
     margin-right: 20px;
