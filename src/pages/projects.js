@@ -7,27 +7,10 @@ import styles from "./projects.module.scss"
 import SearchBar from "../components/SearchBar"
 import Project from "../components/ProjectCard"
 
-import { projects } from "../../static/projects.json"
+import { useGetRepos } from "../hooks/getRepos"
 
 const ProjectsPage = () => {
-  const [repos, setRepos] = useState([])
-
-  useEffect(() => {
-    repos.length === 0 &&
-      fetch("https://api.github.com/users/anilsenay/repos?per_page=100")
-        .then(response => response.json())
-        .then(data => setRepos(repos.concat(data)))
-
-    repos.length !== 0 &&
-      repos.length !== projects.length &&
-      setRepos(
-        repos.filter(item => {
-          if (projects.some(e => e.name === item.name)) return item
-        })
-      )
-  }, [repos])
-
-  console.log(repos)
+  const repos = useGetRepos()
 
   return (
     <Layout>

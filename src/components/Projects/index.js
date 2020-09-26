@@ -3,7 +3,7 @@ import React from "react"
 import styles from "./projects.module.scss"
 import Project from "../HomeProjectCard"
 
-export default function Projects() {
+export default function Projects({ lastestProjects }) {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -11,12 +11,9 @@ export default function Projects() {
         <span className={styles.allLink}>All projects »</span>
       </div>
       <div className={styles.projects}>
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
+        {lastestProjects.map(prj => {
+          return <Project data={prj} />
+        })}
       </div>
     </div>
   )
