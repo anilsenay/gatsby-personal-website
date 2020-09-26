@@ -11,7 +11,9 @@ export default function Project({ name, description, url, language }) {
         style={{
           backgroundColor: language ? githubColors[language].color : "",
         }}
-      />
+      >
+        <span className={styles.tipText}>{language}</span>
+      </div>
 
       <div className={styles.projectInfo}>
         <div className={styles.title}>{name}</div>

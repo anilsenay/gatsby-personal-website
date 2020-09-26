@@ -18,6 +18,25 @@ a {
     min-width: 6px;
     background-color: #81f59b;
     align-self: normal;
+    display: flex;
+    align-items: center;
+
+    .tipText {
+      visibility: hidden;
+      position: absolute;
+      transform: rotate(270deg);
+      margin-left: -80px;
+      background-color: #00000088;
+      padding: 8px;
+      border-radius: 8px;
+      color: white;
+      border: 2px solid #1c2c35;
+      font-weight: bold;
+    }
+
+    &:hover .tipText {
+      visibility: visible;
+    }
   }
 
   .projectInfo {
