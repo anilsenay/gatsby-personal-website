@@ -6,7 +6,6 @@ import DateIcon from "../../assets/date.svg"
 import TagIcon from "../../assets/tag.svg"
 
 export default function BlogPost({ data }) {
-  console.log(data)
   return (
     <Link to={data.frontmatter.slug}>
       <div className={styles.container}>

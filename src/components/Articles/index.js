@@ -5,7 +5,6 @@ import Article from "../HomeArticle"
 import { Link } from "gatsby"
 
 export default function Articles({ lastestArticles }) {
-  console.log(lastestArticles)
   return (
     <div className={styles.container}>
       <div className={styles.header}>
