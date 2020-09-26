@@ -21,10 +21,18 @@ export default function Footer() {
         <span className={styles.text}>Coded by me.</span>
       </div>
       <div className={styles.socialIcons}>
-        <Twitter width={20} height={20} fill="#ffffff" />
-        <Instagram width={20} height={20} fill="#ffffff" />
-        <Github width={20} height={20} fill="#ffffff" />
-        <Linkedin width={20} height={20} fill="#ffffff" />
+        <a href="https://twitter.com/anilsenay">
+          <Twitter width={20} height={20} fill="#ffffff" />
+        </a>
+        <a href="https://instagram.com/anilsenay">
+          <Instagram width={20} height={20} fill="#ffffff" />
+        </a>
+        <a href="https://github.com/anilsenay">
+          <Github width={20} height={20} fill="#ffffff" />
+        </a>
+        <a href="https://linkedin.com/in/anılşenay">
+          <Linkedin width={20} height={20} fill="#ffffff" />
+        </a>
       </div>
     </div>
   )
