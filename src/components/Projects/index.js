@@ -11,8 +11,15 @@ export default function Projects({ lastestProjects }) {
         <span className={styles.allLink}>All projects »</span>
       </div>
       <div className={styles.projects}>
-        {lastestProjects.map(prj => {
-          return <Project data={prj} />
+        {lastestProjects.map(item => {
+          return (
+            <Project
+              name={item.name}
+              description={item.description}
+              url={item.html_url}
+              language={item.language}
+            />
+          )
         })}
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Button() {
+export default function Language({ language }) {
   return (
     <div
       style={{
@@ -11,9 +11,10 @@ export default function Button() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        marginRight: 12,
       }}
     >
-      <span style={{ fontSize: 14 }}>Go Project</span>
+      <span style={{ fontSize: 14 }}>{language}</span>
     </div>
   )
 }

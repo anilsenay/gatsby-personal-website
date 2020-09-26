@@ -1,3 +1,5 @@
+@import "../../colors.scss";
+
 .container {
   display: flex;
   border-radius: 8px;
@@ -5,11 +7,33 @@
   margin-bottom: 10px;
   overflow: hidden;
   height: 260px;
+  cursor: pointer;
+  color: $main-text;
 
   .leftBorder {
     width: 6px;
     background-color: #81f59b;
+    min-width: 6px;
     align-self: normal;
+    display: flex;
+    align-items: center;
+
+    .tipText {
+      visibility: hidden;
+      position: absolute;
+      transform: rotate(270deg);
+      margin-left: -80px;
+      background-color: #00000088;
+      padding: 8px;
+      border-radius: 8px;
+      color: white;
+      border: 2px solid #1c2c35;
+      font-weight: bold;
+    }
+
+    &:hover .tipText {
+      visibility: visible;
+    }
   }
 
   .projectInfo {
@@ -17,14 +41,22 @@
     display: flex;
     flex-direction: column;
     .title {
-      font-size: 24px;
+      font-size: 28px;
       line-height: 30px;
       font-weight: bold;
       margin-bottom: 14px;
+      color: $title-text;
     }
     .info {
-      font-size: 14px;
+      font-size: 16px;
       margin-bottom: auto;
+    }
+    .githubUrl {
+      margin-bottom: 12px;
+    }
+
+    .languages {
+      display: flex;
     }
   }
 
