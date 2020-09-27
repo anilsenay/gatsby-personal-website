@@ -12,5 +12,10 @@
     border: 0;
     color: white;
     margin-left: 10px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
