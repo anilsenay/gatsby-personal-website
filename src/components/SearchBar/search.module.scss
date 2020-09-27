@@ -6,6 +6,11 @@
   padding-left: 15px;
   display: flex;
   align-items: center;
+  border-radius: 8px;
+
+  &:hover {
+    border: 2px solid #41688355;
+  }
 
   .inputArea {
     background-color: transparent;

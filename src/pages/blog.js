@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
@@ -7,19 +7,33 @@ import SearchBar from "../components/SearchBar"
 import styles from "./blog.module.scss"
 import BlogPost from "../components/BlogPost"
 
-const BlogPage = ({ data }) => (
-  <Layout currentPage="Blog">
-    <SEO title="Blog" />
-    <div className={styles.container}>
-      <SearchBar />
-      <div className={styles.articles}>
-        {data.allMarkdownRemark.nodes.map((post, index) => {
-          return <BlogPost key={index} data={post} />
-        })}
+const BlogPage = ({ data }) => {
+  const [searchInput, setSearchInput] = useState("")
+  const filteredPosts =
+    searchInput.length > 0
+      ? data.allMarkdownRemark.nodes.filter(item => {
+          return item.frontmatter.title
+            .toLowerCase()
+            .includes(searchInput.toLowerCase())
+            ? true
+            : false
+        })
+      : data.allMarkdownRemark.nodes
+
+  return (
+    <Layout currentPage="Blog">
+      <SEO title="Blog" />
+      <div className={styles.container}>
+        <SearchBar setInput={setSearchInput} />
+        <div className={styles.articles}>
+          {filteredPosts.map((post, index) => {
+            return <BlogPost key={index} data={post} />
+          })}
+        </div>
       </div>
-    </div>
-  </Layout>
-)
+    </Layout>
+  )
+}
 
 export const pageQuery = graphql`
   {
