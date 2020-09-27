@@ -8,7 +8,7 @@ import styles from "./blog.module.scss"
 import BlogPost from "../components/BlogPost"
 
 const BlogPage = ({ data }) => (
-  <Layout>
+  <Layout currentPage="Blog">
     <SEO title="Blog" />
     <div className={styles.container}>
       <SearchBar />

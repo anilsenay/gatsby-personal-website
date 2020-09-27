@@ -14,7 +14,7 @@ import "./layout.css"
 import Footer from "../Footer"
 import ContactCard from "../ContactCard"
 
-const Layout = ({ children, showContact }) => {
+const Layout = ({ children, showContact, currentPage }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,7 +27,10 @@ const Layout = ({ children, showContact }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header
+        siteTitle={data.site.siteMetadata?.title || `Title`}
+        currentPage={currentPage}
+      />
       <div>
         <main className="container" style={{ paddingTop: 100 }}>
           {children}

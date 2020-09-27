@@ -13,7 +13,7 @@ const ProjectsPage = () => {
   const repos = useGetRepos()
 
   return (
-    <Layout>
+    <Layout currentPage="Projects">
       <SEO title="Projects" />
       <div className={styles.container}>
         <SearchBar />

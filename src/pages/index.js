@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
     "https://api.github.com/users/anilsenay/repos?per_page=10&sort=created"
   )
   return (
-    <Layout showContact>
+    <Layout showContact currentPage="Home">
       <SEO title="Home" />
       <div className={styles.container}>
         <h1>Anıl Şenay</h1>
