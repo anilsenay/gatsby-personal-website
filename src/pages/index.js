@@ -1,13 +1,14 @@
 import React from "react"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Articles from "../components/Articles"
+import Projects from "../components/Projects"
 
 import styles from "./index.module.scss"
-import Projects from "../components/Projects"
+
 import { useGetRepos } from "../hooks/getRepos"
-import { Link } from "gatsby"
 
 const IndexPage = ({ data }) => {
   const repos = useGetRepos(

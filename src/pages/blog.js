@@ -1,11 +1,12 @@
 import React, { useState } from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import SearchBar from "../components/SearchBar"
+import BlogPost from "../components/BlogPost"
 
 import styles from "./blog.module.scss"
-import BlogPost from "../components/BlogPost"
 
 const BlogPage = ({ data }) => {
   const [searchInput, setSearchInput] = useState("")
