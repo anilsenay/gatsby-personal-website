@@ -1,0 +1,40 @@
+@import "../../colors.scss";
+
+.container {
+  height: 42px;
+  width: 100%;
+  border: 2px solid #436c88;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+
+  .text {
+    overflow: hidden;
+  }
+
+  .hoverText {
+    overflow: hidden; // Hide the element content, while height = 0
+    width: 0;
+    opacity: 0;
+    transition: width 200ms 200ms, opacity 200ms ease-in;
+  }
+
+  &:hover {
+    background-color: #243b4a;
+    color: $green-text;
+
+    .text {
+      display: none;
+    }
+    .hoverText {
+      width: auto;
+      opacity: 1;
+      transition: width 0ms 0ms, opacity 200ms 100ms;
+    }
+  }
+}

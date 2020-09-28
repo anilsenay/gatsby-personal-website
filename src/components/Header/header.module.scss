@@ -1,4 +1,5 @@
 @import "../../colors.scss";
+@import "../../breakpoints.scss";
 
 .container {
   background-color: #0b111588;
@@ -15,10 +16,15 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 6vw;
+    padding-right: 6vw;
     align-items: center;
     display: flex;
+
+    @include md {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
 
     .links {
       color: #dbebfb;

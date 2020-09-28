@@ -1,0 +1,20 @@
+@import "../../colors.scss";
+
+.container {
+  height: 42px;
+  width: 100%;
+  border: 2px solid #436c88;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+
+  &:hover {
+    background-color: #243b4a;
+    color: $green-text;
+  }
+}

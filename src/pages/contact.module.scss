@@ -1,7 +1,73 @@
+@import "../colors.scss";
+@import "../breakpoints.scss";
+
 .container {
   padding-top: 80px;
 
   h1 {
     font-size: 48px;
+  }
+  h4 {
+    font-size: 20px;
+    color: $title-text;
+    margin-bottom: 10px;
+    padding-top: 16px;
+  }
+  .greenText {
+    color: $green-text;
+  }
+
+  .email {
+    display: grid;
+    grid-row-gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .socialButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    max-width: 100%;
+    margin-bottom: 30px;
+
+    @include md {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      max-width: 700px;
+    }
+  }
+
+  form {
+    display: grid;
+    grid-row-gap: 4px;
+    max-width: 500px;
+
+    input {
+      background-color: #19252e;
+      padding: 6px;
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      border-radius: 8px;
+      color: white;
+      border: 2px solid #41688355;
+      margin-bottom: 10px;
+    }
+    textarea {
+      height: 200px;
+      background-color: #19252e;
+      padding: 6px;
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      border-radius: 8px;
+      color: white;
+      border: 2px solid #41688355;
+      margin-bottom: 10px;
+    }
+
+    .errorText {
+      color: #ff6161;
+    }
   }
 }
