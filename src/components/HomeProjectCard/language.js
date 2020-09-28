@@ -12,6 +12,7 @@ export default function Language({ language }) {
         justifyContent: "center",
         alignItems: "center",
         marginRight: 12,
+        marginBottom: 12,
       }}
     >
       <span style={{ fontSize: 14 }}>{language}</span>

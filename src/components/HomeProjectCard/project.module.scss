@@ -1,4 +1,5 @@
 @import "../../colors.scss";
+@import "../../breakpoints.scss";
 
 .container {
   display: flex;
@@ -6,7 +7,7 @@
   background-color: #1c2c35;
   margin-bottom: 10px;
   overflow: hidden;
-  height: 260px;
+  min-height: 260px;
   cursor: pointer;
   color: $main-text;
 
@@ -38,6 +39,7 @@
 
   .projectInfo {
     padding: 32px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     .title {
@@ -61,19 +63,22 @@
 
     .languages {
       display: flex;
+      flex-wrap: wrap;
     }
   }
 
-  &:nth-child(3n) {
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-  &:nth-child(3n + 1) {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-  &:nth-child(3n + 2) {
-    grid-column-start: 1;
-    grid-column-end: 2;
+  @include md {
+    &:nth-child(3n) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+    &:nth-child(3n + 1) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    &:nth-child(3n + 2) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
   }
 }
