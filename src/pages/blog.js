@@ -9,6 +9,7 @@ import BlogPost from "../components/BlogPost"
 
 const BlogPage = ({ data }) => {
   const [searchInput, setSearchInput] = useState("")
+
   const filteredPosts =
     searchInput.length > 0
       ? data.allMarkdownRemark.nodes.filter(item => {
@@ -24,6 +25,12 @@ const BlogPage = ({ data }) => {
     <Layout currentPage="Blog">
       <SEO title="Blog" />
       <div className={styles.container}>
+        <p className={styles.searchInfoText}>
+          I've been writing mostly about programming, mostly front-end
+          technologies. In total, I've written{" "}
+          {data.allMarkdownRemark.nodes.length} blog post here so far. You may
+          use the search below to filter by title.
+        </p>
         <SearchBar setInput={setSearchInput} />
         <div className={styles.articles}>
           {filteredPosts.map((post, index) => {
