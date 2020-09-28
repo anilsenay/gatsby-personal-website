@@ -10,17 +10,21 @@
   justify-content: center;
   background-color: #1c2c35;
   margin-bottom: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   .title {
     color: $green-text;
     font-size: 48px;
+    line-height: 48px;
     font-weight: bold;
     padding-bottom: 24px;
     letter-spacing: 2px;
+    text-align: center;
   }
 
   .textContainer {
-    width: 600px;
+    max-width: 600px;
     text-align: center;
   }
 }

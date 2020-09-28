@@ -606,3 +606,9 @@ pre tt:after {
   padding-left: 50px;
   padding-right: 50px;
 }
+@media only screen and (max-width: 768px) {
+  .container {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+}

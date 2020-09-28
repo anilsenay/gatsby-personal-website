@@ -30,15 +30,27 @@ const IndexPage = ({ data }) => {
           life. I am interested in Front-end mostly.
           <p className={styles.learnMoreText}>
             You can read my{" "}
-            <Link to="/blog" className={styles.underline}>
+            <Link
+              to="/blog"
+              className={styles.underline}
+              style={{ borderColor: "#82F9A1" }}
+            >
               blog
             </Link>
             , look at my{" "}
-            <Link to="/projects" className={styles.underline}>
+            <Link
+              to="/projects"
+              className={styles.underline}
+              style={{ borderColor: "#82F9A1" }}
+            >
               projects
             </Link>
             , or learn more{" "}
-            <Link to="/about" className={styles.underline}>
+            <Link
+              to="/about"
+              className={styles.underline}
+              style={{ borderColor: "#82F9A1" }}
+            >
               about
             </Link>{" "}
             me.

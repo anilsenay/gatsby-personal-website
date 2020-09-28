@@ -1,17 +1,29 @@
 @import "../colors";
+@import "../breakpoints";
 
 h1 {
-  font-size: 64px;
+  font-size: 8vw;
   color: $green-text;
+
+  @include md {
+    font-size: 64px;
+  }
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 5vw;
   color: $green-text;
+
+  @include md {
+    font-size: 36px;
+  }
 }
 
 .container {
-  padding-top: 100px;
+  padding-top: 40px;
+  @include md {
+    padding-top: 100px;
+  }
 
   .whoami {
     margin-top: 32px;
@@ -20,7 +32,7 @@ h2 {
 
     .underline {
       border-bottom: 2px solid #1da1f2;
-      padding-bottom: 5px;
+      padding-bottom: 2px;
     }
 
     .learnMoreText {
