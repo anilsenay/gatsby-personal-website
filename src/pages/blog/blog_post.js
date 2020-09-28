@@ -45,14 +45,14 @@ export default function Post({ data }) {
           <span className={styles.readMinute}>
             ~{parseInt(post.wordCount.words / 200) + 1} min read
           </span>
-          <a className={styles.tags}>
+          <div className={styles.tags}>
             <TagIcon />
             {post.frontmatter.keywords?.split(", ").map(keyword => (
               <span className={styles.tagText} key={keyword}>
                 #{keyword}
               </span>
             ))}
-          </a>
+          </div>
         </div>
         <hr />
         <div

@@ -43,6 +43,7 @@
     max-width: 500px;
 
     input {
+      width: 100%;
       background-color: #19252e;
       padding: 6px;
       padding-left: 10px;
@@ -52,8 +53,10 @@
       color: white;
       border: 2px solid #41688355;
       margin-bottom: 10px;
+      margin-top: 6px;
     }
     textarea {
+      width: 100%;
       height: 200px;
       background-color: #19252e;
       padding: 6px;
@@ -64,6 +67,7 @@
       color: white;
       border: 2px solid #41688355;
       margin-bottom: 10px;
+      margin-top: 6px;
     }
 
     .errorText {

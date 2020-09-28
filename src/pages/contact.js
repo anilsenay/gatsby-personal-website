@@ -65,26 +65,35 @@ const ContactPage = () => {
           action="https://submit-form.com/O9J9XLLpT1a9iZAs6I-13"
           target="_blank"
         >
-          <label>Email</label>
-          <input
-            type="text"
-            name="email"
-            placeholder="Email"
-            onChange={e => setInputs({ ...inputs, email: e.target.value })}
-          />
-          <label>Subject</label>
-          <input
-            type="text"
-            name="subject"
-            placeholder="Subject"
-            onChange={e => setInputs({ ...inputs, subject: e.target.value })}
-          />
-          <label>Message</label>
-          <textarea
-            name="message"
-            placeholder="Message"
-            onChange={e => setInputs({ ...inputs, message: e.target.value })}
-          />
+          <label for="email">
+            <span className={styles.labelText}>Email</span>
+            <input
+              id="email"
+              type="text"
+              name="email"
+              placeholder="Email"
+              onChange={e => setInputs({ ...inputs, email: e.target.value })}
+            />
+          </label>
+          <label for="subject">
+            <span className={styles.labelText}>Subject</span>
+            <input
+              id="subject"
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              onChange={e => setInputs({ ...inputs, subject: e.target.value })}
+            />
+          </label>
+          <label for="message">
+            <span className={styles.labelText}>Message</span>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Message"
+              onChange={e => setInputs({ ...inputs, message: e.target.value })}
+            />
+          </label>
           {!emailRegex.test(inputs.email) ||
           inputs.subject.length === 0 ||
           inputs.message.length === 0 ? (
