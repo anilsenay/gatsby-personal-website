@@ -120,5 +120,9 @@
     height: 100%;
     background-color: transparent;
     cursor: pointer;
+
+    @include md {
+      display: none;
+    }
   }
 }
