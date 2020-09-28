@@ -26,6 +26,7 @@ const BlogPage = ({ data }) => {
     <Layout currentPage="Blog">
       <SEO title="Blog" />
       <div className={styles.container}>
+        <h1>Blog</h1>
         <p className={styles.searchInfoText}>
           I've been writing mostly about programming, mostly front-end
           technologies. In total, I've written{" "}

@@ -2,7 +2,10 @@
 @import "../breakpoints.scss";
 
 .container {
-  padding-top: 80px;
+  padding-top: 40px;
+  @include md {
+    padding-top: 80px;
+  }
 
   h1 {
     font-size: 48px;

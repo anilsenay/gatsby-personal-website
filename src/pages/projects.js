@@ -28,6 +28,7 @@ const ProjectsPage = () => {
     <Layout currentPage="Projects">
       <SEO title="Projects" />
       <div className={styles.container}>
+        <h1>Projects</h1>
         <p className={styles.searchInfoText}>
           There are some of my github projects I choose. You can check out for
           other projects on my github profile. You may use the search below to

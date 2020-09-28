@@ -2,7 +2,19 @@
 @import "../breakpoints.scss";
 
 .container {
-  margin-top: 80px;
+  padding-top: 40px;
+  @include md {
+    padding-top: 80px;
+  }
+
+  h1 {
+    font-size: 8vw;
+    color: $green-text;
+
+    @include md {
+      font-size: 64px;
+    }
+  }
 
   .projects {
     margin-top: 100px;
