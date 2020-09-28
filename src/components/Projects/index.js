@@ -1,8 +1,10 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import styles from "./projects.module.scss"
+
 import Project from "../HomeProjectCard"
-import { Link } from "gatsby"
+import Loading from "../Loading"
 
 export default function Projects({ lastestProjects }) {
   return (
@@ -14,17 +16,21 @@ export default function Projects({ lastestProjects }) {
         </span>
       </div>
       <div className={styles.projects}>
-        {lastestProjects.map(item => {
-          return (
-            <Project
-              key={item.name}
-              name={item.name}
-              description={item.description}
-              url={item.html_url}
-              language={item.language}
-            />
-          )
-        })}
+        {lastestProjects.length === 0 ? (
+          <Loading />
+        ) : (
+          lastestProjects.map(item => {
+            return (
+              <Project
+                key={item.name}
+                name={item.name}
+                description={item.description}
+                url={item.html_url}
+                language={item.language}
+              />
+            )
+          })
+        )}
       </div>
     </div>
   )

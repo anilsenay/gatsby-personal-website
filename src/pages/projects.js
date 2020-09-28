@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import styles from "./projects.module.scss"
 import SearchBar from "../components/SearchBar"
 import Project from "../components/ProjectCard"
+import Loading from "../components/Loading"
 
 import { useGetRepos } from "../hooks/getRepos"
 
@@ -34,17 +35,21 @@ const ProjectsPage = () => {
         </p>
         <SearchBar setInput={setSearchInput} />
         <div className={styles.projects}>
-          {filteredPosts.map(item => {
-            return (
-              <Project
-                key={item.name}
-                name={item.name}
-                description={item.description}
-                url={item.html_url}
-                language={item.language}
-              />
-            )
-          })}
+          {filteredPosts.length === 0 ? (
+            <Loading />
+          ) : (
+            filteredPosts.map(item => {
+              return (
+                <Project
+                  key={item.name}
+                  name={item.name}
+                  description={item.description}
+                  url={item.html_url}
+                  language={item.language}
+                />
+              )
+            })
+          )}
         </div>
       </div>
     </Layout>
