@@ -16,11 +16,19 @@ h2 {
   .whoami {
     margin-top: 32px;
     font-size: 18px;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 
     .underline {
       border-bottom: 2px solid #1da1f2;
       padding-bottom: 5px;
+    }
+
+    .learnMoreText {
+      margin-top: 32px;
+      a {
+        color: $title-text;
+        font-weight: bold;
+      }
     }
   }
 }
