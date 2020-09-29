@@ -4,7 +4,7 @@
 .container {
   display: flex;
   border-radius: 8px;
-  background-color: #1c2c35;
+  background-color: $dark-blue;
   margin-bottom: 10px;
   overflow: hidden;
   min-height: 260px;
@@ -28,7 +28,7 @@
       padding: 8px;
       border-radius: 8px;
       color: white;
-      border: 2px solid #1c2c35;
+      border: 2px solid $dark-blue;
       font-weight: bold;
     }
 
