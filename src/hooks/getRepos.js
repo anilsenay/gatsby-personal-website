@@ -19,7 +19,7 @@ const useGetRepos = url => {
   }, [url])
 
   return {
-    data: repos.filter(item => {
+    repos: repos.filter(item => {
       if (projects.some(e => e.name === item.name)) return item
       else return false
     }),

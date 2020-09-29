@@ -11,19 +11,19 @@ import Loading from "../components/Loading"
 import { useGetRepos } from "../hooks/getRepos"
 
 const ProjectsPage = () => {
-  const { data, loading } = useGetRepos()
+  const { repos, loading } = useGetRepos()
 
   const [searchInput, setSearchInput] = useState("")
 
   const filteredPosts =
     searchInput.length > 0
-      ? data.filter(item => {
+      ? repos.filter(item => {
           return item.name.toLowerCase().includes(searchInput.toLowerCase()) ||
             item.description.toLowerCase().includes(searchInput.toLowerCase())
             ? true
             : false
         })
-      : data
+      : repos
 
   return (
     <Layout currentPage="Projects">

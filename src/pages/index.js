@@ -11,7 +11,7 @@ import styles from "./index.module.scss"
 import { useGetRepos } from "../hooks/getRepos"
 
 const IndexPage = ({ data }) => {
-  const repos = useGetRepos(
+  const { repos, loading } = useGetRepos(
     "https://api.github.com/users/anilsenay/repos?per_page=10&sort=created"
   )
   return (
@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
       <div className={styles.container}>
         <h1>Hey, I'm Anıl Şenay</h1>
         <h2>I'm a Front-end developer</h2>
-        <p className={styles.whoami}>
+        <div className={styles.whoami}>
           I am studying Computer Engineering at Marmara University. I've been
           interested in computers and programming since my childhood.{" "}
           <span className={styles.underline}>Coding</span> and{" "}
@@ -56,10 +56,10 @@ const IndexPage = ({ data }) => {
             </Link>{" "}
             me.
           </p>
-        </p>
+        </div>
 
         <Articles lastestArticles={data.allMarkdownRemark.nodes} />
-        <Projects lastestProjects={repos.slice(0, 3)} />
+        <Projects lastestProjects={repos.length > 0 ? repos.slice(0, 3) : []} />
       </div>
     </Layout>
   )
