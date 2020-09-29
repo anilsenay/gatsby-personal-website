@@ -120,6 +120,7 @@
     height: 100%;
     background-color: transparent;
     cursor: pointer;
+    border: 0;
 
     @include md {
       display: none;
