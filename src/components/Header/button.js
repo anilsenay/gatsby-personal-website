@@ -8,7 +8,7 @@ export default function HeaderButton({ ...props }) {
       style={{
         width: 48,
         height: 36,
-        backgroundColor: "transparent",
+        backgroundColor: "#0b1115",
         border: "1px solid #20383d",
         borderRadius: 6,
         cursor: "pointer",
