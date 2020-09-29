@@ -16,7 +16,10 @@ const BlogPage = ({ data }) => {
       ? data.allMarkdownRemark.nodes.filter(item => {
           return item.frontmatter.title
             .toLowerCase()
-            .includes(searchInput.toLowerCase())
+            .includes(searchInput.toLowerCase()) ||
+            item.frontmatter.keywords
+              .toLowerCase()
+              .includes(searchInput.toLowerCase())
             ? true
             : false
         })
