@@ -11,18 +11,19 @@ import Loading from "../components/Loading"
 import { useGetRepos } from "../hooks/getRepos"
 
 const ProjectsPage = () => {
-  const repos = useGetRepos()
+  const { data, loading } = useGetRepos()
 
   const [searchInput, setSearchInput] = useState("")
 
   const filteredPosts =
     searchInput.length > 0
-      ? repos.filter(item => {
-          return item.name.toLowerCase().includes(searchInput.toLowerCase())
+      ? data.filter(item => {
+          return item.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+            item.description.toLowerCase().includes(searchInput.toLowerCase())
             ? true
             : false
         })
-      : repos
+      : data
 
   return (
     <Layout currentPage="Projects">
@@ -36,9 +37,9 @@ const ProjectsPage = () => {
         </p>
         <SearchBar setInput={setSearchInput} />
         <div className={styles.projects}>
-          {filteredPosts.length === 0 ? (
+          {loading ? (
             <Loading />
-          ) : (
+          ) : filteredPosts.length !== 0 ? (
             filteredPosts.map(item => {
               return (
                 <Project
@@ -50,6 +51,8 @@ const ProjectsPage = () => {
                 />
               )
             })
+          ) : (
+            <span className={styles.noResultsText}>No results found</span>
           )}
         </div>
       </div>

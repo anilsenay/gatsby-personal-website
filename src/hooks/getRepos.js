@@ -3,6 +3,7 @@ import { projects } from "../../static/projects.json"
 
 const useGetRepos = url => {
   const [repos, setRepos] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     async function fetchFromGithub() {
@@ -11,17 +12,26 @@ const useGetRepos = url => {
       )
       const json = await res.json()
       setRepos(json)
+      setLoading(false)
     }
 
     fetchFromGithub()
   }, [url])
 
-  return repos.length > 0
-    ? repos.filter(item => {
-        if (projects.some(e => e.name === item.name)) return item
-        else return false
-      })
-    : []
+  return {
+    data: repos.filter(item => {
+      if (projects.some(e => e.name === item.name)) return item
+      else return false
+    }),
+    loading: loading,
+  }
+
+  // return repos.length > 0
+  //   ? repos.filter(item => {
+  //       if (projects.some(e => e.name === item.name)) return item
+  //       else return false
+  //     })
+  //   : []
 }
 
 export { useGetRepos }
