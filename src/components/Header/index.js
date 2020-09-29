@@ -54,15 +54,15 @@ const Header = ({ currentPage }) => {
             Contact
           </Link>
 
-          <button
+          <div
             className={styles.closeButton}
             onClick={() =>
               setShowHeader({ transform: "translate3d(-100vw, 0, 0)" })
             }
           >
             <Close className={styles.close} fill="white" />
-          </button>
-          <button
+          </div>
+          <div
             className={styles.background}
             onClick={() =>
               setShowHeader({ transform: "translate3d(-100vw, 0, 0)" })
