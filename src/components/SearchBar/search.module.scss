@@ -25,3 +25,10 @@
     }
   }
 }
+
+.tags {
+  display: flex;
+  padding-left: 8px;
+  padding-right: 8px;
+  flex-wrap: wrap;
+}

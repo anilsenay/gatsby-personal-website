@@ -48,9 +48,14 @@ export default function Post({ data }) {
           <div className={styles.tags}>
             <TagIcon />
             {post.frontmatter.keywords?.split(", ").map(keyword => (
-              <span className={styles.tagText} key={keyword}>
+              <Link
+                to="/blog"
+                state={{ word: keyword }}
+                className={styles.tagText}
+                key={keyword}
+              >
                 #{keyword}
-              </span>
+              </Link>
             ))}
           </div>
         </div>

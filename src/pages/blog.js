@@ -8,8 +8,10 @@ import BlogPost from "../components/BlogPost"
 
 import styles from "./blog.module.scss"
 
-const BlogPage = ({ data }) => {
-  const [searchInput, setSearchInput] = useState("")
+const BlogPage = ({ data, location }) => {
+  const [searchInput, setSearchInput] = useState(
+    location.state?.word !== undefined ? location.state.word : ""
+  )
 
   const filteredPosts =
     searchInput.length > 0
@@ -25,6 +27,10 @@ const BlogPage = ({ data }) => {
         })
       : data.allMarkdownRemark.nodes
 
+  const tags = filteredPosts.map(item => {
+    return item.frontmatter.keywords
+  })
+
   return (
     <Layout currentPage="Blog">
       <SEO title="Blog" />
@@ -36,7 +42,13 @@ const BlogPage = ({ data }) => {
           {data.allMarkdownRemark.nodes.length} blog post here so far. You may
           use the search below to filter by title.
         </p>
-        <SearchBar setInput={setSearchInput} />
+        <SearchBar
+          input={searchInput}
+          setInput={setSearchInput}
+          tags={
+            tags.length > 0 ? [...new Set(tags.join(", ").split(", "))] : []
+          }
+        />
         <div className={styles.articles}>
           {filteredPosts.map((post, index) => {
             return <BlogPost key={index} data={post} />

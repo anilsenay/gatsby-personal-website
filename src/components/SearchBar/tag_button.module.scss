@@ -1,0 +1,15 @@
+@import "../../colors.scss";
+
+.container {
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  display: flex;
+  padding: 2px 8px;
+  margin-right: 16px;
+  cursor: pointer;
+  margin-top: 16px;
+
+  .text {
+    font-size: 18px;
+  }
+}

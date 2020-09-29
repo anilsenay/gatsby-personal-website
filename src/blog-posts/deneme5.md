@@ -2,7 +2,7 @@
 slug: "/blog/deneme5/"
 date: "2020-07-15"
 title: "Example: Create-react-app readme from github 5"
-keywords: "react, create-react-app, blog, test, markdown"
+keywords: "react, create-react-app, blog, test, markdown, tesst"
 icon: "https://www.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
 ---
 
