@@ -1,4 +1,5 @@
 @import "../breakpoints.scss";
+@import "../colors.scss";
 
 .container {
   padding-top: 40px;
@@ -9,4 +10,131 @@
   h1 {
     font-size: 48px;
   }
+
+  .whoami {
+    .whoamiText {
+      margin-top: 32px;
+      font-size: 18px;
+      line-height: 32px;
+
+      .underline {
+        border-bottom: 2px solid #1da1f2;
+        padding-bottom: 2px;
+      }
+
+      .hackerContainer {
+        color: #82f9a1;
+        border-bottom: 2px solid #82f9a1;
+        padding-bottom: 2px;
+
+        cursor: pointer;
+
+        .hackerText {
+          color: #82f9a1;
+          font-weight: bold;
+        }
+
+        &:hover .tipBox {
+          opacity: 1;
+        }
+
+        .tipBox {
+          max-width: 500px;
+          white-space: pre-wrap;
+          opacity: 0;
+          position: absolute;
+          border: 2px solid #20383d;
+          background-color: #1c2c35;
+          color: $main-text;
+          padding: 8px;
+          border-radius: 8px;
+          transition: opacity 500ms ease-out;
+        }
+      }
+
+      .learnMoreText {
+        margin-top: 32px;
+        a {
+          color: $title-text;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+/*== start of code for tooltips ==*/
+.tool {
+  cursor: help;
+  position: relative;
+  color: #82f9a1;
+  border-bottom: 2px solid #82f9a1;
+  padding-bottom: 2px;
+}
+
+/*== common styles for both parts of tool tip ==*/
+.tool::before,
+.tool::after {
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  z-index: -100;
+}
+
+.tool:hover::before,
+.tool:focus::before,
+.tool:hover::after,
+.tool:focus::after {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  z-index: 100;
+  background-color: #1c2c35;
+  width: 60vw;
+
+  @include md {
+    width: 500px;
+  }
+}
+
+/*== pointer tip ==*/
+.tool::before {
+  border-style: dashed;
+  border-width: 1em 0.75em 0 0.75em;
+  border-color: #82f9a1 transparent transparent transparent;
+  bottom: 100%;
+  content: "";
+  margin-left: -0.5em;
+  transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26),
+    opacity 0.65s 0.5s;
+  transform: scale(0.6) translateY(-90%);
+}
+
+.tool:hover::before,
+.tool:focus::before {
+  transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s;
+  width: 4vw;
+
+  @include md {
+    width: auto;
+  }
+}
+
+/*== speech bubble ==*/
+.tool::after {
+  background: #000;
+  border: 2px solid #82f9a1;
+  bottom: 180%;
+  color: #edeff0;
+  content: attr(data-tip);
+  white-space: pre-wrap;
+  margin-left: -8.75em;
+  padding: 1em;
+  transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s;
+  transform: scale(0.6) translateY(50%);
+  width: 28.5em;
+}
+
+.tool:hover::after,
+.tool:focus::after {
+  transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26);
 }
