@@ -15,7 +15,7 @@ const AboutPage = () => {
       <div className={styles.container}>
         <h1 className={styles.title}>About me</h1>
         <div className={styles.whoami}>
-          <p>
+          <p className={styles.whoamiText}>
             Welcome to my site. I'm Anıl, and I am interesed in Front-end
             developing.
           </p>
@@ -77,7 +77,7 @@ const AboutPage = () => {
             I am a free software advocate and prefer to use free software as
             much as possible.
           </p>
-          <p>
+          <p className={styles.whoamiText}>
             If you would like to get in touch you could{" "}
             <Link to="/contact">contact me here</Link>. If you have any
             feedback, I would be happy to hear from you.
