@@ -1,16 +1,50 @@
+@import "../../breakpoints.scss";
+
 .container {
   display: flex;
   align-items: center;
   font-size: 16px;
+  flex-direction: column-reverse;
+  justify-content: center;
+
+  @include md {
+    flex-direction: row;
+    justify-content: left;
+  }
 
   .textContainer {
     display: flex;
     flex-direction: column;
     margin-right: auto;
+    text-align: center;
+    margin: auto;
+
+    @include md {
+      flex-direction: column;
+      text-align: left;
+      margin: 0px;
+      margin-right: auto;
+    }
   }
   .socialIcons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 40px;
+    margin-bottom: 20px;
+
+    @include md {
+      margin-bottom: 0px;
+      grid-gap: 20px;
+    }
+
+    .icon {
+      width: 32px;
+      height: 32px;
+
+      @include md {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 }
