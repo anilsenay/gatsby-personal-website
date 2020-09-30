@@ -8,6 +8,8 @@ hr {
 
 .container {
   margin-top: 80px;
+  min-height: 60vh;
+
   .titleText {
     font-size: 36px;
     color: $title-text;

@@ -3,6 +3,8 @@
 
 .container {
   padding-top: 40px;
+  min-height: 70vh;
+
   @include md {
     padding-top: 80px;
   }
