@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -36,6 +37,10 @@ function SEO({ description, lang, meta, title }) {
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
+        {
+          name: `og:url`,
+          content: site.siteMetadata?.siteUrl,
+        },
         {
           name: `description`,
           content: metaDescription,
