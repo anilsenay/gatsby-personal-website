@@ -11,7 +11,7 @@ import Loading from "../components/Loading"
 import { useGetRepos } from "../hooks/getRepos"
 
 const ProjectsPage = () => {
-  const { repos, loading } = useGetRepos()
+  const { repos, loading, error } = useGetRepos()
 
   const [searchInput, setSearchInput] = useState("")
 
@@ -52,7 +52,9 @@ const ProjectsPage = () => {
               )
             })
           ) : (
-            <span className={styles.noResultsText}>No results found</span>
+            <span className={styles.noResultsText}>
+              {error ? `Error: ${error}` : "No results found"}
+            </span>
           )}
         </div>
       </div>
