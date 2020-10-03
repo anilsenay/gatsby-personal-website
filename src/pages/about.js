@@ -30,7 +30,7 @@ const AboutPage = () => {
               design
             </span>
             , which I started with curiosity and passion, is now a big part of
-            my life. I am interested in Front-end mostly.
+            my life.
           </p>
           <p className={styles.whoamiText}>
             I can describe myself as a{" "}

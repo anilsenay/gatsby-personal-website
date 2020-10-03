@@ -11,7 +11,7 @@ import styles from "./index.module.scss"
 import { useGetRepos } from "../hooks/getRepos"
 
 const IndexPage = ({ data }) => {
-  const { repos, loading } = useGetRepos(
+  const { repos } = useGetRepos(
     "https://api.github.com/users/anilsenay/repos?per_page=10&sort=created"
   )
   return (
