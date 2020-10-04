@@ -155,7 +155,7 @@ hr {
   margin-bottom: calc(1.45rem - 1px);
   background: #20383d;
   border: none;
-  height: 1px;
+  height: 2px;
 }
 button,
 input,
