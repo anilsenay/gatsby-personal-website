@@ -49,9 +49,9 @@ const ContactPage = () => {
           />
           <SocialButton
             text="Linkedin"
-            hoverText="/anılşenay"
+            hoverText="/anilsenay"
             color="#2867b2"
-            href="https://linkedin.com/in/anılşenay"
+            href="https://linkedin.com/in/anilsenay"
             target="_blank"
           />
         </div>
