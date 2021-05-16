@@ -30,7 +30,7 @@ export default function Footer() {
         <a href="https://github.com/anilsenay">
           <Github fill="#ffffff" className={styles.icon} />
         </a>
-        <a href="https://linkedin.com/in/anılşenay">
+        <a href="https://linkedin.com/in/anilsenay">
           <Linkedin fill="#ffffff" className={styles.icon} />
         </a>
       </div>
