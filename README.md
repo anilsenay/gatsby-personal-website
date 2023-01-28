@@ -1,5 +1,6 @@
-## My personal website. Made with React / Gatsby
+## Personal website/blog built with React / Gatsby
 
-Visit it: [anilsenay.com](https://anilsenay.com)
+
+Visit it: [https://anilsenay-personal-blog.vercel.app/](https://anilsenay-personal-blog.vercel.app/)
 
 Inspired from [Ryan Warner](https://www.figma.com/community/file/824810955262478067)
